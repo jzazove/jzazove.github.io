@@ -10,6 +10,7 @@
 <meta property="og:url" content="http://zazove.org">
 <meta property="og:image" content="https://en.gravatar.com/userimage/26106449/fc152a712fb8eec02599762db5274b50.jpg?size=500">
 <meta name="google-site-verification" content="MwuyiqJD6f6m5azaUVWiMWSPzUc9H2xAXx54NxaljIA"/>
+<link rel="icon" type="image/x-icon" href="/favicon.ico"/>
 <style type="text/css">
 html{width:100%;height:100%;background:#6b6b6b;background:#25bf79; }
 body{width:100%; max-width:600px; height:100%;margin:0 auto;padding:0;text-align:center;font-size:24px;font-family:"Helvetica Neue",Helvetica,arial,sans-serif;color:#f4f4f4;font-weight:normal;}
@@ -20,10 +21,10 @@ a{cursor:pointer;color:#00f;text-decoration:none}
 h1,h2,h3,h4,ul,li,p,b{margin:0;padding:0;font-weight:normal;}
 h1{font-size:100%}
 h2{font-size:100%;}
-h4{font-size:90%; color:#b7bbbd; text-transform: uppercase; padding:28px 0 12px; text-align: center; border-bottom:1px solid #e5e5e5;}
+h4{font-size:80%; color:#b7bbbd; text-transform: uppercase; padding:28px 28px 12px; text-align: left; /*border-bottom:1px solid #e5e5e5;*/}
 h4.h4a {padding-top:38px}
 ul,li {list-style-type: none}
-a{display:inline-block;margin-right:4px;/*color:#ccc*/}
+a{display:inline-block;margin-right:4px;}
 .icon {display:inline-block; width:48px; height:48px; border-radius:48px; vertical-align: top; background-image: url(./img/zazove.png); background-repeat: no-repeat; background-position: 20000px 20000px; }
 @media only screen and (-webkit-min-device-pixel-ratio: 2) { .icon {background-image: url(./img/zazove@2x.png); background-size: 342px 97px}
 
@@ -58,17 +59,19 @@ footer {margin:0 auto 40px auto; border-top:10px solid #25bf79;}
 .icon-fb {background-image: url(https://graph.facebook.com/facebook/picture?type=square); background-position: 0 0; background-size:contain;}
 .icon-ig {background-image: url(https://graph.facebook.com/instagram/picture?type=square);background-position: 0 0; background-size:contain;}
 .icon-amc {background-image: url(https://graph.facebook.com/amc/picture?type=square);background-position: 0 0; background-size:contain;}
+.icon-shop {background-image: url(https://pbs.twimg.com/profile_images/1412404230955180052/sfG5Q2YD_400x400.jpg);background-position: 0 0; background-size:contain;}
 
 
-.ul {width:100%; height:100%; background: #fff}
-.ul li {width:100%;height:64px; clear:both; background-color: #fff; border-bottom:1px solid #e5e5e5; position:relative;}
+.ul {width:90%; height:100%; background: #fff; margin:0 auto; border:4px solid #fff; border-radius:10px; }
+.ul li {width:100%;height:64px; clear:both; background-color: #fff; border-bottom:1px solid #e5e5e5; position:relative; border-radius: 10px}
 .ul li:after {content: ">"; position:absolute;right:10px;top:16px;color:#e5e5e5;}
 .ul li i {margin:10px; float:left;}
 .ul li h1, .ul li h2 {float:left;}
 .ul li b, .ul li em  {display: block; vertical-align:top; text-align:left; color:#666; }
 .ul li em { font-style: normal; }
 .ul li a {display:block;width:100%; height:100%; background:#fff; }
-
+.ul li:nth-last-child(1) {border-bottom:1px solid #fff; }
+/*.ul:nth-last-child(1) {border-color:#fff;}*/
 
 /* font sizes */
 .ul li b {font-size:100%; margin-top:10px;}
@@ -76,29 +79,26 @@ footer {margin:0 auto 40px auto; border-top:10px solid #25bf79;}
 .ul li em.e {font-size:44%;}
 
 
-@media only screen and (max-width:766px){
+@media screen and (max-width:766px){
 	body {margin:0 auto;}
 	.ul li b {font-size:74%; margin-top:10px;}
 	.ul li em {font-size:60%; }
 	.ul li em.e {font-size:44%;}
 
 }
-@media only screen and (max-width:700px){
+@media screen and (max-width:700px){
 	body{font-size:24px}
-	.ul li {}
 }
-
 
 .ul li a, .ul li b { -webkit-transition: all .18s ease-in-out; transition: all .18s ease-in-out; }
-.ul li a:hover {-webkit-transform: scale(1.1); transform: scale(1.1); border-radius:4px; box-shadow: 1px 1px 3px #888; /*border-top:1px solid #ccc;*/}
-.ul li a:hover i {
-	-webkit-animation-name: spin;-webkit-animation-duration: 1000ms;-webkit-animation-iteration-count: infinite;-webkit-animation-timing-function: linear;
-    -moz-animation-name: spin; -moz-animation-duration: 1000ms; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; 
-    animation-name: spin; animation-duration: 1000ms; animation-iteration-count: infinite; animation-timing-function: linear;
-}
+
+@media (hover: hover) {
+.ul li a:hover {-webkit-transform: scale(1.2); transform: scale(1.2); border-radius:4px; box-shadow: 3px 3px 30px #888; position:relative; z-index: 999999}
+.ul li a:hover i {-webkit-animation-name: spin;-webkit-animation-duration: 1000ms;-webkit-animation-iteration-count: infinite;-webkit-animation-timing-function: linear; -moz-animation-name: spin; -moz-animation-duration: 1000ms; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; animation-name: spin; animation-duration: 1000ms; animation-iteration-count: infinite; animation-timing-function: linear;}
 .ul li a:hover b,  .ul li a:hover em {color:#222;-webkit-transform: translateZ(0);font-smooth:always;-webkit-font-smoothing: antialiased;}
 h1 a:hover i {background:#25bf79; color:#fff;}
 h1 a:hover i:after {content:'JZ'; line-height:60px; font-style: normal;}
+}
 
 @-ms-keyframes spin {from { -ms-transform: rotate(0deg); } to { -ms-transform: rotate(360deg); } } @-moz-keyframes spin {from { -moz-transform: rotate(0deg); } to { -moz-transform: rotate(360deg); } } @-webkit-keyframes spin {from { -webkit-transform: rotate(0deg); } to { -webkit-transform: rotate(360deg); } } @keyframes spin {from {transform:rotate(0deg); } to {transform:rotate(360deg); } }
 
@@ -112,12 +112,13 @@ h1 a:hover i:after {content:'JZ'; line-height:60px; font-style: normal;}
 	<section class="section">
 		<h4 class="h4a">current work</h4>
 		<ul class="ul">
-			<li><a href="https://www.facebook.com/"><i class="icon icon-fb"></i><h2><b itemprop="affiliation">Facebook</b> <em itemprop="title">Product Manager</em></h2></a></li> 
+			<li><a href="https://www.shopify.dev/"><i class="icon icon-shop"></i><h2><b itemprop="affiliation">Shopify</b> <em itemprop="title">Director of Product</em></h2></a></li> 
 		</ul>
 	</section>
 	<section class="section">
 		<h4>previous work</h4>
-		<ul class="ul">	
+		<ul class="ul">
+			<li><a href="https://www.facebook.com/"><i class="icon icon-fb"></i><h2><b itemprop="affiliation">Facebook</b> <em itemprop="title">Product Manager</em></h2></a></li> 	
 			<li><a href="https://www.instagram.com/"><i class="icon icon-ig"></i><h2><b itemprop="affiliation">Instagram</b> <em itemprop="title">Product Manager</em></h2></a></li> 
 			<li><a href="https://www.atlassian.com"><i class="icon icon-atl"></i><h2><b itemprop="affiliation">Atlassian</b> <em itemprop="title">Head of Mobile</em></h2></a></li> 
 			<li><a href="https://about.twitter.com"><i class="icon icon-tw"></i><h2><b itemprop="affiliation">Twitter</b> <em itemprop="title">Product Manager</em></h2></a></li>
