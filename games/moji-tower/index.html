@@ -1,110 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Moji Tower: Stack & Match!</title>
-<style>
-body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background: #f5f5f5;
-    color: #333;
-}
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-}
-header {
-    text-align: center;
-    padding: 40px 0;
-    background: linear-gradient(135deg, #6B73FF 0%, #000DFF 100%);
-    color: white;
-}
-.features {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 40px 0;
-}
-.feature-card {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-.emoji-showcase {
-    font-size: 2em;
-    text-align: center;
-    padding: 20px;
-}
-.cta-button {
-    display: inline-block;
-    padding: 15px 30px;
-    background: #000DFF;
-    color: white;
-    text-decoration: none;
-    border-radius: 25px;
-    font-weight: bold;
-    margin: 20px 0;
-}
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #333;
-    color: white;
-}
-footer a {
-    color: white;
-    text-decoration: underline;
-}
-.screenshot {
-    max-width: 300px;
-    margin: 20px auto;
-    display: block;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Moji Tower: A fun emoji-based puzzle game where you stack and match colorful emoji blocks. Available for iPhone, iPad, and Mac.">
+    <title>Moji Tower: Stack & Match!</title>
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #00BCD4 0%, #008ba3 100%);
+            --section-padding: clamp(2rem, 5vw, 4rem);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: #ffffff;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: var(--section-padding);
+            background: var(--primary-gradient);
+            color: white;
+        }
+
+        .app-icon {
+            width: 120px;
+            height: 120px;
+            border-radius: 24px;
+            margin: 0 auto 1.5rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: var(--section-padding) 0;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin: 0 0 1rem;
+            line-height: 1.2;
+        }
+
+        .hero-content p {
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .game-preview {
+            max-width: 300px;
+            margin: 2rem auto;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .game-preview img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .features {
+            background: #f8f9fa;
+            padding: var(--section-padding) 0;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        .feature-emoji {
+            font-size: 4rem; /* Larger emoji size */
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .app-store-button {
+            background: #000;
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 12px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 500;
+            transition: opacity 0.3s ease;
+        }
+        .app-store-download {cursor:pointer}
+        .app-store-button:hover {
+            opacity: 0.9;
+        }
+
+        .no-ads {
+            background: #ff4757;
+            color: white;
+            padding: var(--section-padding) 0;
+            text-align: center;
+        }
+
+        .rating {
+            color: #FFD700;
+            font-size: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        footer {
+            background: #f8f9fa;
+            padding: 2rem 0;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .app-store-button {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>Moji Tower: Stack & Match! 🎮</h1>
-            <p>A fresh take on classic block-stacking fun!</p>
-            <img src="./img/moji-tower-screenshot.png" alt="Game Screenshot" class="screenshot">
+            <img src="./img/moji-tower-app-icon.png" alt="Moji Tower App Icon" class="app-icon"  loading="lazy">
+            <h1>Moji Tower</h1>
+            <p>Stack & Match Emoji Blocks!</p>
+            <div class="rating">★★★★★</div>
         </div>
     </header>
 
-    <main class="container">
-        <div class="emoji-showcase">
-            🌟 💖 🐱 💚 🎭 🐨
-        </div>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h2>Drop colorful emoji blocks from the sky and arrange them perfectly!</h2>
+                    <p>Challenge yourself with this addictive puzzle game that combines classic block-stacking with fun emoji themes.</p>
+                    <div class="game-preview">
+                        <img src="./img/moji-tower-game-preview.gif" alt="Moji Tower Gameplay" loading="lazy">
+                    </div>
+                    <div class="cta-buttons">
+                        <a href="https://apple.co/3DBRXpw" class="app-store-download">
+                            <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-example-preferred_2x.png" alt="App Store icon" />
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <section class="features">
-            <div class="feature-card">
-                <h3>🎯 Perfect for Quick Plays</h3>
-                <p>Jump in for a quick game or stay for hours of engaging puzzle action!</p>
+            <div class="container">
+                <h2>Game Features</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <span class="feature-emoji">🎮</span>
+                        <h3>Classic Gameplay</h3>
+                        <p>Enjoy the timeless falling-block gameplay with a modern emoji twist</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-emoji">🏆</span>
+                        <h3>Compete</h3>
+                        <p>Challenge friends and climb the global leaderboards</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-emoji">🎨</span>
+                        <h3>Multiple Themes</h3>
+                        <p>Choose from various emoji sets: Food, Animals, Weather, and more!</p>
+                    </div>
+                </div>
             </div>
-            <div class="feature-card">
-                <h3>🌈 Multiple Themes</h3>
-                <p>Choose from various emoji sets: Food, Animals, Weather, and more!</p>
-            </div>
-            <div class="feature-card">
-                <h3>🏆 Compete & Win</h3>
-                <p>Challenge friends and climb the global leaderboards!</p>
+        </section>
+
+        <section class="no-ads">
+            <div class="container">
+                <h2>NO ADS</h2>
+                <p>Enjoy the game completely ad-free!</p>
             </div>
         </section>
     </main>
 
     <footer>
         <div class="container">
-            <p>© 2024 Emoji Blocks. All rights reserved.</p>
-            <p>Made with 💖 for puzzle lovers everywhere</p>
-            <p><a href="./f/privacy.html">Privacy Policy</a></p>
+            <p>Available for iPhone, iPad, and Mac</p>
+            <p>© 2024 Moji Tower. All rights reserved.</p>
+            <p><a href="privacy.html">Privacy Policy</a></p>
         </div>
     </footer>
 </body>
