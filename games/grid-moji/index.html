@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Moji - Make it to the flag!</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #6366f1 0%, #3b82f6 50%, #38bdf8 100%);
+            background: linear-gradient(90deg, #835DE5 0%, #38BDF8 100%);
+        }
+        .game-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 4px;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 4px;
+            border-radius: 12px;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            aspect-ratio: 1;
+            width: 280px;
+            margin: 0 auto;
+        }
+        .cell {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            aspect-ratio: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+   		.e {font-size:40px}
+        .status-bar {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 20px;
+            padding: 8px 16px;
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            margin-bottom: 24px;
+            width: fit-content;
+            margin: 0 auto 24px;
+        }
+        .status-item {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            color: white;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body class="gradient-bg min-h-screen">
+    <div class="container mx-auto px-4 py-12">
+        <!-- Header -->
+        <header class="text-center mb-16">
+            <img src="./img/icon-1024.png" alt="Grid Moji Icon" class="w-32 h-32 mx-auto mb-8 rounded-2xl shadow-xl"/>
+            <h1 class="text-6xl font-bold text-white mb-4">Grid Moji</h1>
+            <p class="text-xl text-white opacity-90">Make it to the flag!</p>
+        </header>
+
+        <!-- Game Preview -->
+        <div class="mb-16">
+            <div class="status-bar">
+                <div class="status-item">
+                    <span>⭐</span>
+                    <span>2</span>
+                </div>
+                <div class="status-item">
+                    <span>👣</span>
+                    <span>300</span>
+                </div>
+                <div class="status-item">
+                    <span>❤️</span>
+                    <span>5</span>
+                </div>
+            </div>
+            
+            <div class="game-grid">
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"><div class="e">🏁</div></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"><div class="e">👾</div></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"><div class="e">👻</div></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"><div class="e">🏃🏽‍♂️</div></div>
+                <div class="cell"></div>
+            </div>
+        </div>
+
+        <!-- Download Section -->
+        <div class="text-center">
+            <a href="#" class="inline-block bg-black text-white font-bold py-4 px-12 rounded-xl hover:bg-gray-900 transition duration-300 shadow-lg">
+                Download on the App Store
+            </a>
+            <p class="mt-4 text-white opacity-70">Available for iPhone and iPad</p>
+        </div>
+
+        <!-- Game Center -->
+        <div class="mt-16 text-center">
+            <p class="text-white opacity-90 text-lg">Challenge your friends on Game Center!</p>
+            <p class="text-white opacity-70 mt-2">Compete for the highest scores and unlock achievements</p>
+        </div>
+    </div>
+</body>
+</html>
