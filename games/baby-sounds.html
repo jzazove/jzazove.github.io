@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baby Sounds - Help Your Baby Sleep Peacefully</title>
+    <meta name="description" content="Transform bedtime into a peaceful experience with calming sounds for babies. No ads, works offline. White noise, lullabies, and nature sounds for better sleep.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero .tagline {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .hero .subtitle {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            opacity: 0.9;
+        }
+
+        .badges {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .badge {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .section {
+            margin-bottom: 80px;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #333;
+            text-align: center;
+        }
+
+        .section-intro {
+            text-align: center;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            font-size: 1.1rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .feature-card {
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #667eea;
+        }
+
+        .feature-card p {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .sound-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .category-card {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .category-card h3 {
+            font-size: 1.2rem;
+            margin: 15px 0 10px;
+            color: #333;
+        }
+
+        .category-card ul {
+            list-style: none;
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .category-card li {
+            padding: 5px 0;
+        }
+
+        .premium {
+            color: #764ba2;
+            font-weight: 500;
+        }
+
+        .why-different {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 20px;
+            margin: 80px 0;
+        }
+
+        .why-different .container {
+            padding: 0 20px;
+        }
+
+        .why-different h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+        }
+
+        .comparison {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .comparison-item {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 25px;
+            border-radius: 12px;
+        }
+
+        .comparison-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .perfect-for {
+            background: #f8f9fa;
+            padding: 60px 20px;
+        }
+
+        .perfect-for ul {
+            max-width: 700px;
+            margin: 30px auto;
+            list-style: none;
+        }
+
+        .perfect-for li {
+            padding: 15px 20px;
+            background: white;
+            margin-bottom: 12px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            font-size: 1.05rem;
+        }
+
+        .cta {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .cta p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .app-store-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .app-button {
+            background: white;
+            color: #667eea;
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .app-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        footer {
+            background: #2d3748;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        footer p {
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero .tagline {
+                font-size: 1.2rem;
+            }
+
+            .section-title {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>Baby Sounds</h1>
+        <div class="tagline">Help Your Baby Sleep Peacefully with Calming Sounds</div>
+        <div class="subtitle">Transform bedtime into a peaceful experience with our carefully curated collection of baby sleep sounds and calming white noise. Designed specifically for infants and exhausted parents.</div>
+
+        <div class="badges">
+            <div class="badge">🚫 No Ads</div>
+            <div class="badge">📡 Works Offline</div>
+            <div class="badge">🔋 Battery Optimized</div>
+            <div class="badge">🌙 Dark Mode</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <h2 class="section-title">Why Parents Love Baby Sounds</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🚫</div>
+                    <h3>Completely Ad-Free</h3>
+                    <p>No interruptions during precious sleep time. No pop-ups at 3AM when your baby finally falls asleep.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📡</div>
+                    <h3>100% Offline</h3>
+                    <p>Perfect for airplane travel, poor signal areas, or saving data. Download once and use anywhere, anytime.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔬</div>
+                    <h3>Scientifically Proven Sounds</h3>
+                    <p>White noise, nature sounds, and gentle lullabies proven to help babies sleep longer and deeper.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">⏰</div>
+                    <h3>Smart Sleep Timer</h3>
+                    <p>Automatically fades out after your chosen time (15min to 2 hours). Gentle fade prevents waking baby.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">👆</div>
+                    <h3>One-Tap Operation</h3>
+                    <p>Simple interface designed for tired parents. Large, easy-to-use controls that work in the dark.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔋</div>
+                    <h3>Battery Optimized</h3>
+                    <p>Engineered for all-night use without draining your phone. Background playback continues when locked.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Premium Sound Library</h2>
+            <p class="section-intro">Over 25 carefully crafted sounds designed specifically for baby sleep</p>
+
+            <div class="sound-categories">
+                <div class="category-card">
+                    <div style="font-size: 3rem;">📶</div>
+                    <h3>Classic White Noise</h3>
+                    <ul>
+                        <li>White Noise</li>
+                        <li>Fan</li>
+                        <li>Hair Dryer</li>
+                        <li>Vacuum Cleaner</li>
+                        <li>Air Conditioner</li>
+                    </ul>
+                </div>
+
+                <div class="category-card">
+                    <div style="font-size: 3rem;">🌧️</div>
+                    <h3>Nature Sounds</h3>
+                    <ul>
+                        <li>Rain</li>
+                        <li class="premium">Ocean Waves ⭐</li>
+                        <li class="premium">Forest Ambience ⭐</li>
+                        <li class="premium">Thunderstorm ⭐</li>
+                        <li class="premium">Stream Water ⭐</li>
+                    </ul>
+                </div>
+
+                <div class="category-card">
+                    <div style="font-size: 3rem;">💓</div>
+                    <h3>Comfort Sounds</h3>
+                    <ul>
+                        <li>Heartbeat</li>
+                        <li class="premium">Womb Sounds ⭐</li>
+                        <li class="premium">Gentle Humming ⭐</li>
+                        <li class="premium">Car Ride ⭐</li>
+                        <li class="premium">Shushing ⭐</li>
+                    </ul>
+                </div>
+
+                <div class="category-card">
+                    <div style="font-size: 3rem;">🎵</div>
+                    <h3>Musical Lullabies</h3>
+                    <ul>
+                        <li>Classic Lullaby</li>
+                        <li class="premium">Piano Melodies ⭐</li>
+                        <li class="premium">Music Box ⭐</li>
+                        <li class="premium">Harp ⭐</li>
+                        <li class="premium">Soft Guitar ⭐</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="why-different">
+        <div class="container">
+            <h2>What Makes Us Different?</h2>
+            <div class="comparison">
+                <div class="comparison-item">
+                    <h3>Zero Ads, Ever</h3>
+                    <p>Unlike other sleep apps, we'll never interrupt your baby's sleep with advertisements or promotional content.</p>
+                </div>
+                <div class="comparison-item">
+                    <h3>True Offline Mode</h3>
+                    <p>Many apps claim to work offline but still need connectivity. We work 100% offline after initial download.</p>
+                </div>
+                <div class="comparison-item">
+                    <h3>Baby-Focused Design</h3>
+                    <p>Every sound is specifically chosen and optimized for infant sleep, not just generic ambient noise.</p>
+                </div>
+                <div class="comparison-item">
+                    <h3>No Subscriptions for Basics</h3>
+                    <p>Core features and essential sounds are completely free. Premium sounds are optional, not required.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="perfect-for">
+        <div class="container">
+            <h2 class="section-title">Perfect For</h2>
+            <ul>
+                <li>🍼 Newborns and infants who need consistent white noise</li>
+                <li>😫 Colicky babies who find comfort in womb-like sounds</li>
+                <li>🛏️ Toddlers transitioning to independent sleep</li>
+                <li>✈️ Travel situations where familiar sleep sounds help</li>
+                <li>🌙 Parents who want reliable, offline sleep solutions</li>
+                <li>👪 Families looking for ad-free, child-safe apps</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <h2 class="section-title">Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>High-Quality Audio</h3>
+                    <p>Looping audio designed for extended play without harsh transitions or audio glitches.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Dark Mode</h3>
+                    <p>Sleep-friendly interface designed for nighttime use. Easy on tired eyes.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Background Playback</h3>
+                    <p>Sounds continue playing when your phone is locked or you switch apps.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Custom Sound Mixing</h3>
+                    <p>Blend multiple sounds together to create the perfect sleep environment for your baby.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Volume Control</h3>
+                    <p>Fine-tune the volume to the perfect level for your baby's comfort and safety.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Regular Updates</h3>
+                    <p>New sounds added regularly based on parent feedback and sleep research.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="cta">
+        <h2>Give Your Family the Gift of Better Sleep</h2>
+        <p>Download now and experience peaceful bedtimes - completely ad-free and always available offline.</p>
+
+        <div class="app-store-buttons">
+            <a href="#" class="app-button">
+                <span style="font-size: 1.5rem;"></span>
+                Download on the App Store
+            </a>
+            <a href="#" class="app-button">
+                <span style="font-size: 1.5rem;">▶</span>
+                Get it on Google Play
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <p>Baby Sounds - Peaceful Sleep for Babies and Parents</p>
+        <p style="margin-top: 10px; font-size: 0.9rem;">No ads. No internet required. Just peaceful sleep.</p>
+    </footer>
+</body>
+</html>
