@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - Slide to Slide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #667eea;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 24px;
+            color: #333;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .faq-item {
+            margin-bottom: 25px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 12px;
+            border-left: 4px solid #667eea;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .faq-answer {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .contact-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .contact-box h3 {
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        .contact-box p {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 20px;
+        }
+
+        .contact-email {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 15px 25px;
+            border-radius: 10px;
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        .contact-email:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .back-link {
+            display: inline-block;
+            color: #667eea;
+            text-decoration: none;
+            margin-top: 30px;
+            font-weight: 600;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Support</h1>
+
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+            <div class="faq-question">How do I earn coins?</div>
+            <div class="faq-answer">You earn coins by completing levels. The better your star rating (based on swipe efficiency), the more coins you earn. You can also watch rewarded ads to get extra coins.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">What do the power-ups do?</div>
+            <div class="faq-answer">
+                <strong>Bomb:</strong> Removes an obstacle from the grid<br>
+                <strong>Undo:</strong> Reverses your last move<br>
+                <strong>Skip:</strong> Allows you to skip a difficult level
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">How does the star rating work?</div>
+            <div class="faq-answer">Each level has an optimal swipe count. Complete the level in fewer swipes to earn more stars (1-3 stars). Try to find the most efficient path to maximize your rating!</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">My progress was lost. Can I recover it?</div>
+            <div class="faq-answer">Progress is saved locally on your device. If you've deleted the app or switched devices, unfortunately the progress cannot be recovered at this time. We recommend keeping the app installed to maintain your progress.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">I'm stuck on a level. What should I do?</div>
+            <div class="faq-answer">Try approaching the puzzle from different angles. Sometimes the solution requires thinking backwards from the target position. If you're still stuck, you can use coins to skip the level or watch a rewarded ad to earn power-ups.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Can I disable ads?</div>
+            <div class="faq-answer">Slide to Slide is free-to-play and supported by ads. While there's currently no ad-free version, you can earn all power-ups through gameplay without watching optional rewarded ads.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">How many levels are there?</div>
+            <div class="faq-answer">Slide to Slide features over 1000 levels! The first levels are hand-crafted tutorials, followed by progressively challenging procedurally generated puzzles.</div>
+        </div>
+
+        <div class="contact-box">
+            <h3>Still Need Help?</h3>
+            <p>Can't find the answer you're looking for? We're here to help!</p>
+            <a href="mailto:support@zazove.org" class="contact-email">Contact Support</a>
+        </div>
+
+        <h2>Report a Bug</h2>
+        <p>If you've encountered a bug or technical issue, please email us with:</p>
+        <ul>
+            <li>Your device model and iOS version</li>
+            <li>A description of the problem</li>
+            <li>The level number (if applicable)</li>
+            <li>Screenshots if possible</li>
+        </ul>
+
+        <a href="index.html" class="back-link">&larr; Back to Home</a>
+    </div>
+</body>
+</html>

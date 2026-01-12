@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide to Slide - Puzzle Game</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 30px;
+            padding: 50px 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 48px;
+            color: #667eea;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .tagline {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .screenshot {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            margin: 30px auto;
+        }
+
+        .features {
+            text-align: left;
+            margin: 30px 0;
+        }
+
+        .feature {
+            margin: 15px 0;
+            padding-left: 30px;
+            position: relative;
+            color: #444;
+            font-size: 16px;
+        }
+
+        .feature:before {
+            content: "⭐";
+            position: absolute;
+            left: 0;
+        }
+
+        .download-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 18px 40px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            margin-top: 20px;
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px rgba(102, 126, 234, 0.5);
+        }
+
+        .links {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .links a {
+            color: #667eea;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 14px;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Slide to Slide</h1>
+        <p class="tagline">A challenging puzzle adventure</p>
+
+        <div class="features">
+            <div class="feature">1000+ progressive levels with hand-crafted tutorials</div>
+            <div class="feature">Star rating system based on optimal swipe count</div>
+            <div class="feature">Power-ups: bombs, undo, and skip abilities</div>
+            <div class="feature">Earn coins by completing levels</div>
+            <div class="feature">Beautiful glossy 3D UI with smooth animations</div>
+        </div>
+
+        <a href="#" class="download-btn">Download on the App Store</a>
+
+        <div class="links">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="support.html">Support</a>
+        </div>
+    </div>
+</body>
+</html>
